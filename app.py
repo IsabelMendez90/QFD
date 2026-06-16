@@ -11,7 +11,7 @@ from datetime import datetime
 # -----------------------------------------------------------------------------
 # CONFIGURACIÓN
 # -----------------------------------------------------------------------------
-st.set_page_config(page_title="Challenge Mentor AI - Matriz QFD", layout="wide")
+st.set_page_config(page_title="Mentor AI - Matriz QFD", layout="wide")
 
 API_KEY = st.secrets["OPENROUTER_API_KEY"]
 API_BASE = st.secrets["OPENROUTER_API_BASE"]
