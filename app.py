@@ -13,28 +13,9 @@ from datetime import datetime
 # -----------------------------------------------------------------------------
 st.set_page_config(page_title="Challenge Mentor AI - Matriz QFD", layout="wide")
 
-# Leer la API Key desde Streamlit Secrets
-try:
-    API_KEY = st.secrets["OPENROUTER_API_KEY"]
-except KeyError:
-    st.error("❌ Falta configurar OPENROUTER_API_KEY en los Secrets de Streamlit.")
-    st.stop()
-
-API_BASE = "https://openrouter.ai/api/v1"
-
-# Puedes cambiar el modelo desde Streamlit Secrets agregando:
-# OPENROUTER_MODEL = "deepseek/deepseek-r1-0528:free"
-MODEL_NAME = st.secrets.get("OPENROUTER_MODEL", "deepseek/deepseek-r1-0528:free")
-
-# Fallbacks gratuitos. Si un modelo gratuito deja de tener endpoint disponible,
-# la app intenta con el siguiente antes de fallar.
-MODEL_NAMES = list(dict.fromkeys([
-    MODEL_NAME,
-    "deepseek/deepseek-r1-0528:free",
-    "deepseek/deepseek-r1:free",
-]))
-
-
+API_KEY = st.secrets["OPENROUTER_API_KEY"]
+API_BASE = st.secrets["OPENROUTER_API_BASE"]
+MODEL_NAME = st.secrets["OPENROUTER_MODEL"]
 # -----------------------------------------------------------------------------
 # INSTRUCCIONES DEL SISTEMA
 # -----------------------------------------------------------------------------
