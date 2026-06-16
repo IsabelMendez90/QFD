@@ -1,0 +1,10 @@
+streamlit
+openai
+pandas
+json5
+reportlab
+streamlit-chat
+markdown2
+python-docx
+pillow
+openpyxl
