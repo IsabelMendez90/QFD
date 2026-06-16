@@ -16,6 +16,7 @@ st.set_page_config(page_title="Mentor AI - Matriz QFD", layout="wide")
 API_KEY = st.secrets["OPENROUTER_API_KEY"]
 API_BASE = st.secrets["OPENROUTER_API_BASE"]
 MODEL_NAME = st.secrets["OPENROUTER_MODEL"]
+MODEL_NAMES = [MODEL_NAME]
 # -----------------------------------------------------------------------------
 # INSTRUCCIONES DEL SISTEMA
 # -----------------------------------------------------------------------------
@@ -158,7 +159,7 @@ def asegurar_lista(valor, longitud, relleno=""):
 # -----------------------------------------------------------------------------
 # UI
 # -----------------------------------------------------------------------------
-st.title("🤖 AI Challenge Mentor - Matriz QFD")
+st.title("🤖 Mentor IA - Matriz QFD")
 st.markdown("Creadora: Dra. J. Isabel Méndez Garduño")
 st.subheader("Guía interactiva que te sugiere requerimientos técnicos para tu QFD.")
 st.markdown(
